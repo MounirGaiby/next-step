@@ -1,3 +1,5 @@
 class HomesController < ApplicationController
-  def index; end
+  def index
+    @holidays = HolidayService.new.get_holidays
+  end
 end
