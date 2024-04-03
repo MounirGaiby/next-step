@@ -19,6 +19,8 @@ Bundler.require(*Rails.groups)
 
 module NextStep
   class Application < Rails::Application
+    config.autoload_paths << Rails.root.join("app", "views", "components")
+    config.view_component.preview_paths << Rails.root.join("app", "views", "components")
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
@@ -44,5 +46,9 @@ module NextStep
                        request_specs: false,
                        controller_specs: true
     end
+
+    # ViewComponents
+    config.view_component.view_component_path = "app/views/components"
+    config.eager_load_paths << Rails.root.join("app/views/components")
   end
 end

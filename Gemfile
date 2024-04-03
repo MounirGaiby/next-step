@@ -51,6 +51,8 @@ gem 'bootsnap', require: false
 # component framework for building UI
 gem 'view_component'
 
+gem 'view_component-contrib'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
@@ -94,4 +96,6 @@ group :test do
   gem 'simplecov-cobertura', require: false
 end
 
-gem "tailwindcss-rails", "~> 2.3"
+gem 'tailwindcss-rails', '~> 2.3'
+
+gem "dry-initializer", "~> 3.1"

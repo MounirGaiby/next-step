@@ -7,3 +7,6 @@ Metrics/MethodLength:
 
 Metrics/ParameterLists:
   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
